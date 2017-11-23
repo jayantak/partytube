@@ -4,6 +4,7 @@ get_songs() {
 while read url
 do
 	if [ "${url//youtube}" != "$url" ]; then
+		echo "with url $url"
 		./youtube-dl --restrict-filenames -o './input/%(id)s.%(ext)s' "$url"
 		filename="$(ls -u ./input/ |head -n1)"
 		if [ -n "$filename" ]; then
@@ -24,6 +25,7 @@ done
 
 while [ 1 ]
 do
+	echo "In loop"
 	curl -s "$1/playlist" | get_songs
 	sleep 60
 done
