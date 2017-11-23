@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-URL="https://far-dash.glitch.me/"
+URL="https://far-dash.glitch.me"
 
 if [ "$(id -u)" != "0" ]; then
 	echo "This script requires root" >&2
