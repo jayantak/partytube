@@ -28,7 +28,7 @@ trap "script_shutdown" EXIT SIGTERM
 script_startup
 
 echo "Starting"
-./show_playlist.py
+# ./show_playlist.py
 
 while [ 1 ]
 do

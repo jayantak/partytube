@@ -24,6 +24,6 @@ done
 
 while [ 1 ]
 do
-	curl -s "$1/get.php" |get_songs
+	curl -s "$1/playlist" | get_songs
 	sleep 60
 done
