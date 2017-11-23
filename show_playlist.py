@@ -18,10 +18,10 @@ archive='./played'
 screen = None;
 
 os.putenv('SDL_VIDEODRIVER', 'fbcon')
-    try:
-        pygame.display.init()
-    except pygame.error:
-        raise Exception('Could not open fbcon')
+try:
+    pygame.display.init()
+except pygame.error:
+    raise Exception('Could not open fbcon')
 
 width = pygame.display.Info().current_w
 height = pygame.display.Info().current_h

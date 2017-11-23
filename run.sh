@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-URL="http://yoururl.example.com/party"
+URL="https://far-dash.glitch.me/"
 
 if [ "$(id -u)" != "0" ]; then
 	echo "This script requires root" >&2
@@ -11,7 +11,7 @@ fi
 cd "$(dirname "$0")"
 
 script_startup() {
-	sudo -u youtube bash -c "screen -mdS nfc_collect /home/youtube/get_songs_nfc.sh"
+	# sudo -u youtube bash -c "screen -mdS nfc_collect /home/youtube/get_songs_nfc.sh"
 	sudo -u youtube bash -c "screen -mdS http_collect /home/youtube/get_songs_http.sh $URL"
 }
 
@@ -33,7 +33,7 @@ echo "Starting"
 while [ 1 ]
 do
 	echo "Showing playlist"
-	./show_playlist.py
+	# ./show_playlist.py
 	clear >/dev/tty0
 	tput civis >/dev/tty0
 	sleep 1
