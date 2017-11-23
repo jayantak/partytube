@@ -3,6 +3,7 @@
 get_songs() {
 while read url
 do
+	echo url
 	if [ "${url//youtube}" != "$url" ]; then
 		echo "with url $url"
 		./youtube-dl --restrict-filenames -o './input/%(id)s.%(ext)s' "$url"
