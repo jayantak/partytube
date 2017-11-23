@@ -26,6 +26,7 @@ done
 while [ 1 ]
 do
 	echo "In loop"
+	echo $( curl -s "$1/playlist" )
 	curl -s "$1/playlist" | get_songs
 	sleep 60
 done
